@@ -22,10 +22,3 @@ console.error(r2Err, r2Rez);
 
 const [r3Err, r3Rez] = sum(5, 7);
 console.error(r3Err, r3Rez);
-
-/**
- * Funkcija, kuri grazina teksto raide, pagal nurodyta pozicija.
- */
-function letter(text, position) {
-
-}
