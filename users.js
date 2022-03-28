@@ -7,8 +7,9 @@ const users = [
 
 let i = 0;
 for (const user of users) {
-    console.log(`${++i}) Student ${user.name} is ${user.age} years old and is${user.isMarried ? '' : ' not'} married.`);
+    const married = user.isMarried ? '' : 'not ';
+    const fileName = user.name.toLowerCase() + '.json';
+    console.log(`${++i}) Student ${user.name} is ${user.age} years old and is ${married}married (${fileName}).`);
 }
 
-// 1) Student Petras is 99 years old and is married (petras.json).
-// 2) Student Maryte is 87 years old and is not married (maryte.json).
+// Kiekviena user objekta irasyti i atskira faila, kurie turetu buti talpinami `.data/users` folderyje. Failo pavadinimas atitinka sablona `vardenis.json` (mazosios raides).
