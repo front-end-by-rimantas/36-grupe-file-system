@@ -27,9 +27,10 @@ console.log(updateFileStatus2);
 const readFileStatus3 = await file.read('users', 'petras.json');
 console.log(readFileStatus3);
 
-// file.delete();
+const deleteFileStatus = await file.delete('users', 'petras.json');
+console.log(deleteFileStatus);
 
-// const readFileStatus3 = await file.read('users', 'petras.json');
-// console.log(readFileStatus3);
+const readFileStatus4 = await file.read('users', 'petras.json');
+console.log(readFileStatus4);
 
 
