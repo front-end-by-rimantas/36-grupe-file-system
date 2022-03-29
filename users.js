@@ -1,3 +1,5 @@
+import { file } from './lib/file.js';
+
 const users = [
     { name: 'Petras', age: 99, isMarried: true },
     { name: 'Maryte', age: 87, isMarried: false },
@@ -5,11 +7,10 @@ const users = [
     { name: 'Ona', age: 54, isMarried: true },
 ];
 
-let i = 0;
 for (const user of users) {
-    const married = user.isMarried ? '' : 'not ';
     const fileName = user.name.toLowerCase() + '.json';
-    console.log(`${++i}) Student ${user.name} is ${user.age} years old and is ${married}married (${fileName}).`);
+    const status = await file.create('users', fileName, user);
+    console.log(fileName, status);
 }
 
 // Kiekviena user objekta irasyti i atskira faila, kurie turetu buti talpinami `.data/users` folderyje. Failo pavadinimas atitinka sablona `vardenis.json` (mazosios raides).
